@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form id="form" action="#" method="get">
+      <div class="container">
+        <div class="form-header">
+          <h3>Registration Form</h3>
+        </div>
+
+        <div class="input-form">
+          <div class="inline-forms">
+            <div class="form-group">
+              <label for="first-name">First Name:</label>
+              <input
+                type="name"
+                id="first-name"
+                name="first-name"
+                value="first-name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name:</label>
+              <input type="name" id="last-name" name="last-name" />
+            </div>
+          </div>
+
+          <div class="inline-forms">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="phonenumber">phonenumber:</label>
+              <input
+                type="tel"
+                id="phonenumber"
+                name="phonenumber"
+                value="phonenumber"
+              />
+            </div>
+          </div>
+          <div class="inline-forms">
+            <div class="form-group">
+              <label for="country">coutnry:</label>
+              <select name="country" id="country">
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="China">China</option>
+                <option value="Qatar">Qatar</option>
+                <option value="India">India</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="city">city:</label>
+              <select name="city" id="city">
+                <option value="Dhaka">Dhaka</option>
+                <option value="Narayangonj">Narayangonj</option>
+                <option value="qualalampur">qualalampur</option>
+                <option value="beijing">beijing</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend>Select Your Gender</legend>
+
+              <div>
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  checked
+                />
+                <label for="male">Male</label>
+              </div>
+
+              <div>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+              </div>
+
+              <div>
+                <input type="radio" id="other" name="gender" value="other" />
+                <label for="other">Other</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label for="birth-date">Enter your birth date</label>
+            <input type="datetime-local" id="birth-date" value="birth-date" />
+          </div>
+
+          <div class="form-group">
+            <label for="bio"><legend>put your bio here</legend></label>
+            <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="inline-forms">
+            <div class="form-group">
+              <label for="password" name="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value="password"
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirmpassword">confirm password</label>
+              <input
+                type="password"
+                name="password"
+                id="confirmpassword"
+                value="confirmpassword"
+              />
+            </div>
+          </div>
+
+          <div class="check-box">
+            <label for="accept">I accept term and conditions</label>
+            <input type="checkbox" name="accept" id="accept" value="accept" />
+          </div>
+          <div class="form-group">
+            <label for="sbtn"></label>
+            <button type="submit" id="sbtn">Submit</button>
+            <button type="reset" id="btn">Reset</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script defer src="./validateform.js"></script>
+  </body>
+</html>
