@@ -1,15 +1,22 @@
 const button = document.querySelector("#btn");
 const item = document.querySelector("#item");
+const unorderdlist=document.querySelector('ul');
 
-function appendItem() {
-  const child = document.createElement("li");
+function appendItem(){
+  const current_input=item.value;
+  const child=document.createTextNode(current_input);
+  item.value='';
+  const list=document.createElement('li');
+  unorderdlist.appendChild(list);
+  const btn=document.createElement('button');
+  btn.innerText="remove"
+  
+  list.appendChild(child);
+  list.appendChild(btn);
 
-  const itm = `
-        <li>
-            ${item.value} <button>delete</button>
-        </li>
-  `;
-  child.innerHTML = itm;
-  document.querySelector("ul").appendChild(child);
-  item.value = "";
+  btn.addEventListener('click',event=>{
+  unorderdlist.removeChild(list);
+  });
+  item.focus();
+
 }

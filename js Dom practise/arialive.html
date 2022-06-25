@@ -10,18 +10,21 @@
     
     <fieldset>
         <legend><label for="prophets">Select a person</label></legend>
-        <select name="person" id="prophets">
-            <option value="">select name</option>
+        <select name="person" id="prohpetselect">
+            <option value="">Select a person</option>
             <option value="rasul">rasul</option>
             <option value="jesus">jesus</option>
             <option value="moses">moses</option>
             <option value="david">david</option>
           
         </select>
+        <span><button type="button"     id="renderpersoninfobutton">info</button></span>
     </fieldset>
-   
+   <div role="region" id="personinfo">
     <h3 id="person_name">no input is selected</h3>
-    <div id="person_description">select a person to show his description</div>
+    <p id="person_description">select a person to show his description</p>
+   </div>
+    
     <script src="/arialive.js"></script>
 </body>
 </html>

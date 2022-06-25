@@ -23,16 +23,25 @@ prophets={
 const person_name=document.querySelector('#person_name');
 
 const person_description=document.querySelector('#person_description');
+const info=document.querySelector('#renderpersoninfobutton');
 
 function renderPerson(person){
-    const selectProphet=document.getElementById('prophets');
-    
-    const selectedProphet=selectProphet.option[selectProphet.selectedIndex].value;
-
+  
     if(person in prophets){
         person_name.textContent=prophets[person].title;
-        person_description=prophets.[person].description;
+        person_description.textContent=prophets[person].description;
     }
-        
-   
+    else
+    {
+        person_name.textContent="no person selected";
+        person_description.textContent="select a person to show descritpion";
+    }   
 }
+
+
+info.addEventListener('click',event=>{
+    const selectProphet=document.querySelector('#prohpetselect');
+    
+    const selectedProphet=selectProphet.options[selectProphet.selectedIndex].value;
+    renderPerson(selectedProphet);
+});
