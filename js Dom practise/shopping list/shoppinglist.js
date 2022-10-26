@@ -10,7 +10,6 @@ function appendItem(){
   unorderdlist.appendChild(list);
   const btn=document.createElement('button');
   btn.innerText="remove"
-  
   list.appendChild(child);
   list.appendChild(btn);
 
