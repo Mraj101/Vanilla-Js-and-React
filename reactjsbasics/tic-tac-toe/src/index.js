@@ -21,7 +21,7 @@ import './index.css';
 
       handleClick(i) {
         const squares = this.state.squares.slice();
-        squares[i] = 'X';
+        squares[i] = this.state.xisNext?'X':'0';
         this.setState({
           squares: squares,
           xisNext:!this.state.xisNext,
