@@ -83,7 +83,10 @@ import './index.css';
       } else {
         status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
-      const moves=history.map((step,move)=>{
+
+//map is an array method which does not mutates array and iterates through every element of array.
+      const moves=history.map((step,move)=>{//here the first argument (step) is the actual element and 
+        // the second argument (move ) is the index number of the array
         const desc=move?"Go to move #"+move:"Go to start";
         return(
           <li>
