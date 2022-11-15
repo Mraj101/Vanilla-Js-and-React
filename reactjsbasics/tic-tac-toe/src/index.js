@@ -1,3 +1,7 @@
+import React from 'react';
+import './index.css';
+import * as ReactDOM from 'react-dom/client';
+
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
@@ -10,15 +14,15 @@ class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square
-        value={this.props.squares[i]}
-        onClick={() => this.props.onClick(i)}
+      value={this.props.squares[i]}
+      onClick={() => this.props.onClick(i)}
       />
-    );
-  }
-
-  render() {
-    return (
-      <div>
+      );
+    }
+    
+    render() {
+      return (
+        <div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -38,6 +42,9 @@ class Board extends React.Component {
     );
   }
 }
+//map is an array method which does not mutates array and iterates through every element of array.
+// ((step,move)=>{//here the first argument (step) is the actual element and
+// the second argument (move ) is the index number of the array
 
 class Game extends React.Component {
   constructor(props) {
@@ -45,14 +52,14 @@ class Game extends React.Component {
     this.state = {
       history: [
         {
-          squares: Array(9).fill(null),
-        },
+          squares: Array(9).fill(null)
+        }
       ],
       stepNumber: 0,
-      xIsNext: true,
+      xIsNext: true
     };
   }
-
+  
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
@@ -64,52 +71,51 @@ class Game extends React.Component {
     this.setState({
       history: history.concat([
         {
-          squares: squares,
-        },
+          squares: squares
+        }
       ]),
       stepNumber: history.length,
-      xIsNext: !this.state.xIsNext,
+      xIsNext: !this.state.xIsNext
     });
   }
-
+  
   jumpTo(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: step % 2 === 0,
+      xIsNext: (step % 2) === 0
     });
   }
-
+  
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
-
-    //map is an array method which does not mutates array and iterates through every element of array.
-    // ((step,move)=>{//here the first argument (step) is the actual element and
-    // the second argument (move ) is the index number of the array
+    
     const moves = history.map((step, move) => {
-      const desc = move ? "Go to move #" + move : "Go to game start";
+      const desc = move ?
+      'Go to move #' + move :
+      'Go to game start';
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
     });
-
+    
     let status;
     if (winner) {
       status = "Winner: " + winner;
     } else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
-
+    
     return (
       <div className="game">
         <div className="game-board">
           <Board
             squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-          />
+            onClick={i => this.handleClick(i)}
+            />
         </div>
         <div className="game-info">
           <div>{status}</div>
@@ -134,7 +140,7 @@ function calculateWinner(squares) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6],
+    [2, 4, 6]
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
