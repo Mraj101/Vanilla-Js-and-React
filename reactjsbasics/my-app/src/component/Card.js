@@ -7,18 +7,21 @@ let month=date.getMonth();
 
 
 const footer={
+    margin:"10px",
     textAlign:"center",
     fontSize:"1rem",
-    color: "yellow"
+    color: "pink",
+    backgroundColor:"green",
 }
-function Card()
+function Card(props)
 {
+    const{content}=props;
     return(
         <div className="Container">
             <h3 className="card-head">My Task's</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptates, ducimus quam deleniti similique sapiente facere debitis aperiam commodi consectetur amet aut quidem doloremque! Est inventore sequi natus odit? Quisquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, soluta. Ab quis quos nobis suscipit accusamus dolorum est voluptatum voluptatem!
+            <p>{content}
             </p>
-            <p style={footer}>{day+"/"+ month +"/"+ year}</p>
+            <p style={{fontWeight:"800",footer:footer}}>{day+"/"+ month +"/"+ year}</p>
         </div>
     )
 }

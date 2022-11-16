@@ -16,13 +16,14 @@ code {
 }
 
 .Container{
+  display: inline-block;
   width: 250px;
   margin: 10px;
   padding: 10px;
   border: 2px solid rgb(233, 209, 150);
   border-radius: 5px;
   color: white;
-  background-color: rgb(135, 135, 226);
+  background-color: rgb(207, 235, 108);
   box-shadow: 1px 2px 4px rgb(209, 209, 143);
   text-align: center;
 }
