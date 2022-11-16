@@ -12,6 +12,8 @@ const footer={
     fontSize:"1rem",
     color: "pink",
     backgroundColor:"green",
+    borderRadius:"8px",
+    padding:"5px",
 }
 function Card(props)
 {
@@ -21,7 +23,7 @@ function Card(props)
             <h3 className="card-head">My Task's</h3>
             <p>{content}
             </p>
-            <p style={{fontWeight:"800",footer:footer}}>{day+"/"+ month +"/"+ year}</p>
+            <p style={footer}>{day+"/"+ month +"/"+ year}</p>
         </div>
     )
 }
