@@ -17,11 +17,12 @@ const footer={
 }
 function Card(props)
 {
-    const{content}=props;
+    const {title,content}=props;
     return(
         <div className="Container">
-            <h3 className="card-head">My Task's</h3>
-            <p>{content}
+            <h3 className="card-head">{title}</h3>
+            <p style={{padding:"10px",lineHeight:"1.5" ,fontSize:"18px",fontWeight:"350",textAlign:"justify"}}>
+                {content}
             </p>
             <p style={footer}>{day+"/"+ month +"/"+ year}</p>
         </div>
