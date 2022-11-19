@@ -3,7 +3,7 @@ import {AiFillApple}  from 'react-icons/ai';
 
 export default function AddingReactIcon() {
   return (
-    <div style={{height:"20px",width:"20px", border:"2px solid red"}}>
+    <div style={{height:"400px",width:"400px", border:"2px solid red"}}>
         <h1>
            addingReactIcon <AiFillApple/>? 
         </h1>
