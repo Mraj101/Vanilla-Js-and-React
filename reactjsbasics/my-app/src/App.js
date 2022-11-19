@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./component/Card"
 import Data from "./data.json"  
 import { v4 as uuidv4 } from "uuid";
-     
+import ReactIcon from "./component/AddingReactIcon";
 
 
 
@@ -18,6 +18,7 @@ function App(){
   return (
     <div>
          {item}
+         <ReactIcon/>
     </div>
   )
 }
