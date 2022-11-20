@@ -7,18 +7,20 @@ export default class State extends Component {
             count:0
         }
     }
-    handleIncrement=()=>{
-        return (
-            this.setState={
-                count:this.count+1
-            }
-        )
-    }
+
     handleDecrement=()=>{
         return (
-            this.setState={
-                count: this.count-1
-            }
+            this.setState({
+                count: this.state.count-1
+            })
+         )
+    }
+    
+    handleIncrement=()=>{
+        return (
+            this.setState({
+                count: this.state.count+1
+            })
         )
     }
   render() {
@@ -30,8 +32,8 @@ export default class State extends Component {
         <div className='state'>
         our state : {this.state.count}
         </div>
-        <button style={{margin:"30px",padding:"20px" ,width:"100px",backgroundColor:"green" ,borderRadius:"10px"}} onClick={this.handleIncrement}>+</button>
-        <button  style={{margin:"30px",padding:"20px" ,width:"100px",backgroundColor:"blue" ,borderRadius:"10px"}}onClick={this.handleDecrement} >-</button>
+        <button style={{margin:"30px",padding:"20px" ,width:"100px",backgroundColor:"green" ,borderRadius:"10px",fontSize:"2rem",fontWeight:"800",color:"white"}} onClick={this.handleIncrement}>+</button>
+        <button  style={{margin:"30px",padding:"20px" ,width:"100px",backgroundColor:"blue" ,borderRadius:"10px",fontSize:"2rem",fontWeight:"800",color:"white"}}onClick={this.handleDecrement} disabled={(this.state.count===0)?true:false} >-</button>
       </div>
     )
   }
