@@ -21,8 +21,10 @@ const styleContent={
     lineHeight:"1.5",
     fontSize:"18px",
     fontWeight:"350",
-    textAlign:"justify"
+    textAlign:"justify",
+    
 }
+
 function Card(props)
 {
     const {title,content}=props;

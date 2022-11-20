@@ -4,7 +4,7 @@ import Data from "./data.json"
 import { v4 as uuidv4 } from "uuid";
 import ReactIcon from "./component/AddingReactIcon";
 import ReactBootstrap from "./component/ReactBootstrap/ReactBootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import State from "./State";
 
 
 
@@ -21,6 +21,7 @@ function App(){
          {item}
          <ReactIcon/>
          <ReactBootstrap/>
+         <State/>
     </div>
   )
 }
