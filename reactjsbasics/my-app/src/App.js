@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import ReactIcon from "./component/AddingReactIcon";
 import ReactBootstrap from "./component/ReactBootstrap/ReactBootstrap";
 import State from "./State";
+import HandleEvent from "./ReactEventHandler";
 
 
 
@@ -22,6 +23,7 @@ function App(){
          <ReactIcon/>
          <ReactBootstrap/>
          <State/>
+         <HandleEvent/>
     </div>
   )
 }
