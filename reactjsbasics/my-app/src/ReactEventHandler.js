@@ -9,22 +9,26 @@ export default class ReactEventHandler extends Component {
       }
     }
 
+    
+
+ 
+        onChangeHandler = (e)=>{
+           this.setState({
+               changedValue:e.target.value
+           } )
+      }
+          
+
+   
+
+ render() {
     const container={ 
         border:"2px solid blue",
         width:"500px",padding:"30px" ,
         margin:"300px",
         padding:"100px"
        }
-
- 
-       const onChangeHandler = (e)=>{
-           this.setState({
-               changedValue:e.target.value
-           } )
-      }
-          
- render() {
-
+       
     return (
         <div style={container}>
         <h1>
