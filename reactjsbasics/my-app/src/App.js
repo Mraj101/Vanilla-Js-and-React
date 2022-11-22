@@ -6,7 +6,7 @@ import ReactIcon from "./component/AddingReactIcon";
 import ReactBootstrap from "./component/ReactBootstrap/ReactBootstrap";
 import State from "./State";
 import HandleEvent from "./ReactEventHandler";
-
+import HookState from "./useStateHook"
 
 
 function App(){
@@ -24,6 +24,7 @@ function App(){
          <ReactBootstrap/>
          <State/>
          <HandleEvent/>
+         <HookState/>
     </div>
   )
 }

@@ -39,3 +39,14 @@ code {
   padding: 10px;
   color: rgb(143, 26, 123);
 }
+.button
+{
+  margin:30px;
+  padding:20px ;
+ 
+  background-color:rgb(36, 73, 5) ;
+  border-radius:10px;
+  font-size:2rem;
+  font-weight:800;
+  color:white;
+}
