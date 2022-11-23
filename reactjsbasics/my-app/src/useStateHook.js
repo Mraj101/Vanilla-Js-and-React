@@ -15,6 +15,7 @@ export default function HookState(){
 
     return(
         <div className="Container">
+            
             <h1>{count} </h1>
             <button className="button" onClick={handleIncrease}>
                 Increase
