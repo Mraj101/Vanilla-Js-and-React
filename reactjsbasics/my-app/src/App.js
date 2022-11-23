@@ -7,6 +7,7 @@ import ReactBootstrap from "./component/ReactBootstrap/ReactBootstrap";
 import State from "./State";
 import HandleEvent from "./ReactEventHandler";
 import HookState from "./useStateHook"
+import Form from "./component/ReactForm/Form";
 
 
 function App(){
@@ -19,6 +20,7 @@ function App(){
        const item=Data.map((item,index) => <Card key={uuidv4()} content={item.content} title={item.title}/>)
   return (
     <div>
+         <Form/>
          {item}
          <ReactIcon/>
          <ReactBootstrap/>
