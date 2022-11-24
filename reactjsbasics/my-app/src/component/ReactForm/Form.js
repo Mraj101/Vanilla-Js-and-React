@@ -1,8 +1,27 @@
-import React from 'react';
+import React,{useState} from 'react';
 import style from "./form.module.css"
 const ReactForm = () => {
 
+    const [name,setName]=useState('')
+    const [email,setEmail]=useState('')
+    const [password,setPassword]=useState('')
 
+    const handleName=(e)=>{
+        setName(e.target.value)
+        console.log(e.target.value)
+    }
+     const handleEmail=(e)=>{
+        setEmail(e.target.value)
+        console.log(e.target.value)
+    } 
+    const handlePassword=(e)=>{
+        setPassword(e.target.value)
+        console.log(e.target.value)
+    }
+
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+    }
 
 
 
@@ -12,17 +31,17 @@ const ReactForm = () => {
                 <h1> React Form </h1>
                 <div className={style.formGroup} >
                     <label htmlFor="name">Name: </label>
-                    <input type="text" id='name' name='name'  required />
+                    <input onChange={handleName}  type="text" id='name' name='name'  required />
                 </div>
                 
                 <div className={style.formGroup}>
                     <label htmlFor="email">Email: </label>
-                    <input type="email" id='email' name='email' required/>
+                    <input onChange={handleEmail} type="email" id='email' name='email' required/>
                 </div>
                 
                 <div className={style.formGroup}>
                     <label htmlFor="password">Password:</label>
-                    <input type="password" id='password' name='password' required/>
+                    <input onChange={handlePassword} type="password" id='password' name='password' required/>
                 </div>
                 <button className={style.formGroup}>
                     Register
