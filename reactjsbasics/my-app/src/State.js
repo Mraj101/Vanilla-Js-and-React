@@ -25,7 +25,9 @@ export default class State extends Component {
     }
   render() {
     return (
+      
       <div style={{ border:"2px solid blue",width:"500px",padding:"30px" ,margin:"300px"}}>
+          <h1>Used Class based Component</h1>
         <h3>
             Increament or Decrement handler
         </h3>

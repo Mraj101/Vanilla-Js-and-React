@@ -8,7 +8,7 @@ const ReactForm = () => {
 
     return (
         <div  style={{height:"100vh" ,width:"100vw" ,color:"black"}}>
-            <form  action='' className={style.containForm} style={{ backgroundColor:"skyblue" ,color:"black"}}>
+            <form  action='' onSubmit={handleSubmit} className={style.containForm} style={{ backgroundColor:"skyblue" ,color:"black"}}>
                 <h1> React Form </h1>
                 <div className={style.formGroup} >
                     <label htmlFor="name">Name: </label>

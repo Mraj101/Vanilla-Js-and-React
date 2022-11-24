@@ -24,7 +24,7 @@ export default class ReactEventHandler extends Component {
  render() {
     const container={ 
         border:"2px solid blue",
-        width:"500px",padding:"30px" ,
+        width:"40vw",padding:"30px" ,
         margin:"300px",
         padding:"100px"
        }
@@ -32,8 +32,9 @@ export default class ReactEventHandler extends Component {
     return (
         <div style={container}>
         <h1>
-            Take an input plz
+            onChange Handler(event.target.value)
         </h1>
+        <h3>Take an input Plz</h3>
         <input onChange={this.onChangeHandler} type="text"/>
         <p>
             {this.state.changedValue}

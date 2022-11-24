@@ -15,8 +15,8 @@ export default function HookState(){
 
     return(
         <div className="Container">
-            
-            <h1>{count} </h1>
+            <h1 style={{color:"black"}}>Used State Hook</h1>
+            <h2 style={{color:"blue"}}>{count} </h2>
             <button className="button" onClick={handleIncrease}>
                 Increase
             </button>
