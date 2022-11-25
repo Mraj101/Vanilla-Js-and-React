@@ -77,8 +77,7 @@ const [user,setUser]=useState({name:"",email:"",password:"" })
 const {name,email,password}=user
 
 const handleChange=(e) =>{
-    const fieldName=e.target.name
-    if(fieldName==="name"){
+   /* if(fieldName==="name"){
         setUser({name:e.target.value,email,password})
     }
      if(fieldName==="email"){
@@ -86,11 +85,12 @@ const handleChange=(e) =>{
     } 
     if(fieldName==="password"){
         setUser({name,email,password:e.target.value})
-    }
+    }*/
+
+    setUser({...user, [e.target.name]:e.target.value})
 
 }
  const handleSubmit=(e)=>{
-    console.log("form is submitted")
     console.log(user)
     e.preventDefault()
  }
