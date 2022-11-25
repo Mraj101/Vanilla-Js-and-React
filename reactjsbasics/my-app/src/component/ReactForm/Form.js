@@ -73,6 +73,28 @@ const ReactForm = () => {
 ///proper way is to define 1 handle change method and call it on on every input field and retrieve that data from there
 
 ///
+const [user,setUser]=useState({name:"",email:"",password:"" })
+const {name,email,password}=user
+
+const handleChange=(e) =>{
+    const fieldName=e.target.name
+    if(fieldName==="name"){
+        setUser({name:e.target.value,email,password})
+    }
+     if(fieldName==="email"){
+        setUser({name,email:e.target.value,password})
+    } 
+    if(fieldName==="password"){
+        setUser({name,email,password:e.target.value})
+    }
+
+}
+ const handleSubmit=(e)=>{
+    console.log("form is submitted")
+    console.log(user)
+    e.preventDefault()
+ }
+
 
  
     return (
@@ -82,17 +104,17 @@ const ReactForm = () => {
                 <h1> React Form </h1>
                 <div className={style.formGroup} >
                     <label htmlFor="name">Name: </label>
-                    <input onChange={handleName}  type="text" id='name' name='name' value={name}  required />
+                    <input onChange={handleChange}  type="text" id='name' name='name' value={name}  required />
                 </div>
                 
                 <div className={style.formGroup}>
                     <label htmlFor="email">Email: </label>
-                    <input onChange={handleEmail} type="email" id='email' name='email' value={email} required/>
+                    <input onChange={handleChange} type="email" id='email' name='email' value={email} required/>
                 </div>
                 
                 <div className={style.formGroup}>
                     <label htmlFor="password">Password:</label>
-                    <input onChange={handlePassword} type="password" id='password' name='password' value={password} required/>
+                    <input onChange={handleChange} type="password" id='password' name='password' value={password} required/>
                 </div>
 
                 <button type='submit'  className = {style.formGroup} >
