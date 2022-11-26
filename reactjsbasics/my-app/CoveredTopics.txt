@@ -1,0 +1,28 @@
+1| nmp create-react-app
+2|creating react functoinal components
+3|sending data from parent components through
+ props
+
+4|reciving the data in the child components
+ and manipulating it in the child
+components using props.
+
+5|used react icons {getreacticons.github}
+6|used react bootstrap{get react bootstrap}
+7|used react class based 
+component
+
+8|changed states in the class based components.
+[made increment decrement handler using react-
+class-based-component and changed states]
+
+9|used react useState hook in the functional
+component.
+
+10|passed objects in the useState hook. 
+
+11|controlled componenents of the input field
+using state hook and [value ={value} inside
+input field]
+
+12|
