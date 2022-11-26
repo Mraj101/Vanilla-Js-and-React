@@ -50,3 +50,6 @@ code {
   font-weight:800;
   color:white;
 }
+button:disabled{
+  background-color: red;
+}
