@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+}
+.containForm{
+    height: 80vh;
+    width: 30vw;
+    margin: 50px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.formGroup>input{
+    margin-left: 50px;
+    padding: 10px;
+    border-radius: 4px;
+}
+.formGroup{
+    margin: 20px;
+}
