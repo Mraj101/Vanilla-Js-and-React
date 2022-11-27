@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import './App.css';
 import style from './form.module.css'
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
 
   const handleSubmit=(e)=>{
     console.log(user)
-    e.preventDefault()
  }
 
   return (

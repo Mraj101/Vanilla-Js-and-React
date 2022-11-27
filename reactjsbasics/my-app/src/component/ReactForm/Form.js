@@ -92,7 +92,7 @@ const handleChange=(e) =>{
 }
  const handleSubmit=(e)=>{
     console.log(user)
-    
+    e.preventDefault()
  }
 
 
