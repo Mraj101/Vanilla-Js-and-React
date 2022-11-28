@@ -41,21 +41,21 @@ function App() {
                 <div className={style.formGroup} >
                     <label htmlFor="name">Name: </label>
                     <input onChange={formik.handleChange}  type="text" id='name' name='name' value={formik.values.name}  required /><br/>
-                    {formik.touched.name && formik.errors.name && (<span>{formik.errors.name}</span>)}
+                    {formik.touched.name && formik.errors.name && (<span style={{color:"red"}} >{formik.errors.name}</span>)}
                 </div>
                 
                 <div className={style.formGroup}>
                     <label htmlFor="email">Email: </label>
                     <input onChange={formik.handleChange} type="email" id='email' name='email' value={formik.values.email} required/>
                     <br/>
-                    {formik.touched.email && formik.errors.name && (<span>{formik.errors.email}</span>)}
+                    {formik.touched.email && formik.errors.name && (<span style={{color:"red"}}>{formik.errors.email}</span>)}
 
                 </div>
                 
                 <div className={style.formGroup}>
                     <label htmlFor="password">Password:</label>
                     <input onChange={formik.handleChange} type="password" id='password' name='password' value={formik.values.password} required/><br/>
-                    {formik.touched.password && formik.errors.name && (<span>{formik.errors.password}</span>)}
+                    {formik.touched.password && formik.errors.name && (<span style={{color:"red"}}>{formik.errors.password}</span>)}
 
                 </div>
 
