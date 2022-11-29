@@ -1,7 +1,11 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import style from './form.module.css'
 import * as yup from 'yup';
+
+
+import Home from './components/Home';
+
+
 
 
 
@@ -30,13 +34,14 @@ function App() {
   //       values:""
   //     })
   //   },
+  // })
 
-  })
+
 
 
   return ( 
 
-
+      <Home />
 
 
 
@@ -78,7 +83,7 @@ function App() {
 
     //         </form>
     // </div>
-  );
+  )
 }
 
 export default App;
