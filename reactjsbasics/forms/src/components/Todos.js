@@ -1,13 +1,11 @@
 import React from 'react'
 
-const Todos = (props) => {
-    const [todos] = props.todos
-    const todo=todos.map((todo,index)=>{
-        <p> </p>
-})
-  return (
+import Todo from './Todo'
+
+const Todos = (props) => {   
+   return (
     <div>
-      
+        { props.todos.map((todo,index) => <Todo key={index} todo={todo} />) }
     </div>
   )
 }

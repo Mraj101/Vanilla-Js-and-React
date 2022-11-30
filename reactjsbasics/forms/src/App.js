@@ -4,6 +4,7 @@ import * as yup from 'yup';
 
 
 import Home from './components/Home';
+import NewTodo from './components/NewTodo';
 
 
 
@@ -40,8 +41,9 @@ function App() {
 
 
   return ( 
-
+    <div className='container'>
       <Home />
+    </div>
 
 
 
