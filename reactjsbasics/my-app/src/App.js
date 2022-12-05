@@ -11,6 +11,7 @@ import HandleEvent from "./ReactEventHandler";
 import HookState from "./useStateHook"
 import ReactForm from "./component/ReactForm/Form";
 import Child from "./component/stateLifting/ChildComponent";
+import Toggle from "./component/toggling/toggle";
 
 function App(){
   // another way of fetching using for loops
@@ -36,6 +37,7 @@ function App(){
          <HandleEvent/>
          <HookState/>
          <Child data="I am a data sent from (App:) eg. parents " onChildData={handleChild} />
+         <Toggle/>
     </div>
   )
 }
