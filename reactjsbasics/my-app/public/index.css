@@ -57,4 +57,24 @@ button{
 button:disabled{
   background-color: red;
   cursor: pointer;
+  box-shadow: inset 0px 0px 10px black;
+}
+.btnInc{
+  padding: 25px;
+  background-color: green;
+  border-radius: 4px;
+  margin: 10px;
+  font-size: 30px;
+  color: white;
+  border:none
+}
+.btnDic{
+  padding: 25px;
+  background-color: blue;
+  border-radius: 4px;
+  margin: 10px;
+  font-size: 30px;
+  color: white;
+  border:none
+
 }
