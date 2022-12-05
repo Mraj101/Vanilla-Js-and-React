@@ -50,6 +50,11 @@ code {
   font-weight:800;
   color:white;
 }
+button{
+  padding: 25px;
+  margin: 20px;
+}
 button:disabled{
   background-color: red;
+  cursor: pointer;
 }
