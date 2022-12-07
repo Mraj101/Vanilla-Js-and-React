@@ -35,3 +35,14 @@ task1(()=>{
         })
     })
 })
+
+
+
+function square(x){
+    console.log(`squared value is: ${x*x}`)
+}
+function higherOrderFunction(number,callback){
+    callback(number)
+}
+
+higherOrderFunction(6,square)
