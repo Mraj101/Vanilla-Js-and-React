@@ -37,7 +37,7 @@ const taskOne=(()=>{
 
 const taskTwo=(()=>{
     return new Promise((resolve,reject)=>{
-        resolve("Task Two2 is completed")
+        reject("Task Two2 is not completed")
     })
 })
 const taskThree=(()=>{
@@ -68,6 +68,9 @@ taskOne()
 .then(taskFour)
 .then((res)=>{
     console.log("this is task four then-----" ,res)
+})
+.catch((res)=>{
+    console.log("this is rejected------",res)
 })
 
 
