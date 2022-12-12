@@ -54,24 +54,17 @@ const taskFour=(()=>{
 })
 
 taskOne()
-.then((res)=>{
-    console.log("this is task one's then-----" ,res)
-})
+.then((res)=>{console.log("this is task one's then-----" ,res)})
 .then(taskTwo)
-.then((res)=>{
-    console.log("this is task two's then-----" ,res)
-})
+
+.then((res)=>{console.log("this is task two's then-----" ,res)})
 .then(taskThree)
-.then((res)=>{
-    console.log("this is task three's then-----" ,res)
-})
+
+.then((res)=>{console.log("this is task three's then-----" ,res)})
 .then(taskFour)
-.then((res)=>{
-    console.log("this is task four then-----" ,res)
-})
-.catch((res)=>{
-    console.log("this is rejected------",res)
-})
+
+.then((res)=>{console.log("this is task four then-----" ,res)})
+.catch((res)=>{ console.log("this is rejected------",res)})
 
 
 
