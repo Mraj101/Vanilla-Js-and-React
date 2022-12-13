@@ -35,4 +35,7 @@ const postData=()=>{
 }
 
 postData()
+
+
+
 console.log("Byue")
