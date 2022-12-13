@@ -1,6 +1,12 @@
-import React,{useState,useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 
-const DataFetching = () => {
+
+const [todos,setTodos]=useState(null)
+const [isLoading,setIsLoading]=useState(true)
+const [error,setError]=useState(null)
+const loadingMsg=<p>Data Loading</p>
+
+const DataFetchingErrorHandling = () => {
     const [todos,setTodos]=useState(null)
 
     useEffect(()=>{
@@ -25,4 +31,4 @@ const DataFetching = () => {
   )
 }
 
-export default DataFetching
+export default DataFetchingErrorHandling

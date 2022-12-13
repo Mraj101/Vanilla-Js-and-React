@@ -14,6 +14,8 @@ import Child from "./component/stateLifting/ChildComponent";
 import Toggle from "./component/toggling/toggle";
 import UseEffect from "./component/UseEffect/useEffect";
 import DataFetching from "./component/UseEffect/DataFetching";
+import DataFetchingErrorHandling from "./component/UseEffect/DataFetchingErrorHandling";
+
 
 function App(){
   // another way of fetching using for loops
@@ -42,6 +44,7 @@ function App(){
          <Toggle/>
          <UseEffect/>
          <DataFetching/>
+         <DataFetchingErrorHandling/>
     </div>
   )
 }
