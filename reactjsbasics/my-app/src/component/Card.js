@@ -29,7 +29,7 @@ function Card(props)
 {
     const {title,content}=props;
     return(
-        <div className="Container">
+        <div className={['Container-cards']}>
             <h3 className="card-head">{title}</h3>
             <p style={styleContent}>
                 {content}

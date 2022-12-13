@@ -24,13 +24,11 @@ export default class ReactEventHandler extends Component {
  render() {
     const container={ 
         border:"2px solid blue",
-        width:"40vw",padding:"30px" ,
-        margin:"300px",
-        padding:"100px"
+        backgroundColor:"red",
        }
        
     return (
-        <div style={container}>
+        <div  style={container} className="Container">
         <h1>
             onChange Handler(event.target.value)
         </h1>

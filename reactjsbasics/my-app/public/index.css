@@ -19,8 +19,21 @@ code {
 }
 
 .Container{
-  display: inline-block;
+  display: block;
   margin: 10px;
+  padding: 10px;
+  width:31%;
+  border: 2px solid rgb(233, 209, 150);
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(207, 235, 108);
+  box-shadow: 1px 2px 8px rgb(150, 150, 18);
+  text-align: center;
+  overflow: hidden;
+}
+.Container-cards{
+  display: inline-block;
+  margin: 15px;
   padding: 10px;
   width:31%;
   border: 2px solid rgb(233, 209, 150);
