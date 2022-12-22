@@ -15,6 +15,7 @@ import Toggle from "./component/toggling/toggle";
 import UseEffect from "./component/UseEffect/useEffect";
 import DataFetching from "./component/UseEffect/DataFetching";
 import DataFetchingErrorHandling from "./component/UseEffect/DataFetchingErrorHandling";
+import InlineDynamic from "./component/dynamic styling/InlineDynamic";
 
 
 function App(){
@@ -45,6 +46,7 @@ function App(){
          <UseEffect/>
          <DataFetching/>
          <DataFetchingErrorHandling/>
+         <InlineDynamic/>
     </div>
   )
 }
