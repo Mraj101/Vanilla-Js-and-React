@@ -1,21 +1,21 @@
 import React from "react";
 
 
-import Card from "./component/Card"
+import Card from "./components/Card"
 import Data from "./data.json"  
 import { v4 as uuidv4 } from "uuid";
-import ReactIcon from "./component/AddingReactIcon";
-import ReactBootstrap from "./component/ReactBootstrap/ReactBootstrap";
+import ReactIcon from "./components/AddingReactIcon";
+import ReactBootstrap from "./components/ReactBootstrap/ReactBootstrap";
 import State from "./State";
 import HandleEvent from "./ReactEventHandler";
 import HookState from "./useStateHook"
-import ReactForm from "./component/ReactForm/Form";
-import Child from "./component/stateLifting/ChildComponent";
-import Toggle from "./component/toggling/toggle";
-import UseEffect from "./component/UseEffect/useEffect";
-import DataFetching from "./component/UseEffect/DataFetching";
-import DataFetchingErrorHandling from "./component/UseEffect/DataFetchingErrorHandling";
-import InlineDynamic from "./component/dynamic styling/InlineDynamic";
+import ReactForm from "./components/ReactForm/Form";
+import Child from "./components/stateLifting/ChildComponent";
+import Toggle from "./components/toggling/toggle";
+import UseEffect from "./components/UseEffect/useEffect";
+import DataFetching from "./components/UseEffect/DataFetching";
+import DataFetchingErrorHandling from "./components/UseEffect/DataFetchingErrorHandling";
+import InlineDynamic from "./components/dynamic styling/InlineDynamic";
 import Fragments from "./components/fragments/Fragments"
 
 function App(){
