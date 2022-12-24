@@ -16,7 +16,7 @@ import UseEffect from "./component/UseEffect/useEffect";
 import DataFetching from "./component/UseEffect/DataFetching";
 import DataFetchingErrorHandling from "./component/UseEffect/DataFetchingErrorHandling";
 import InlineDynamic from "./component/dynamic styling/InlineDynamic";
-
+import Fragments from "./components/fragments/Fragments"
 
 function App(){
   // another way of fetching using for loops
@@ -47,6 +47,7 @@ function App(){
          <DataFetching/>
          <DataFetchingErrorHandling/>
          <InlineDynamic/>
+         <Fragments />
     </div>
   )
 }
