@@ -17,9 +17,12 @@ const bookData=[{
     name:"Fahim"
 }
 ]
+const reducer=()=>{
+    
+}
 
 const Modal=({modalText})=>{
-    return <p>{modalText}</p>
+    return <p style={{backgroundColor:"green"}}>{modalText}</p>
 }
 
 const Usereducer = () => {
@@ -28,18 +31,27 @@ const Usereducer = () => {
  const [isModal,setIsModal]=useState(false)
  const [modalText,setModalText]=useState('')
 
- const [state, dispatch] = useReducer(reducer,{
-
+ const [BookState, dispatch] = useReducer(reducer,{
+    books:bookData,
+    isModal:false,
+    modalText:'',
  })
 
  const handleSubmit=(e)=>{
     e.preventDefault()
-    setBooks((prevBooks)=>{
-        const newBook={id:new Date().getTime().toString(), name:bookName}
-        return [...prevBooks,newBook]
-    })
-    setIsModal(true)
-    setModalText('Book is added')
+    if(bookName.length>3){
+        setBooks((prevBooks)=>{
+            const newBook={id:new Date().getTime().toString(), name:bookName}
+            return [...prevBooks,newBook]
+        })
+        setModalText('Book is added')
+        setIsModal(true)
+        setBookName('')
+    }
+    else if(bookName.length<=3){
+        setIsModal(true)
+        setModalText('Enter book name')
+    }
  }
 
   return (
