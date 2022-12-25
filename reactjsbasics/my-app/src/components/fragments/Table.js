@@ -3,7 +3,7 @@ import Column from './Column'
 
 const Table = () => {
   return (
-    <div>
+    <>
         <table>
             <tr>
                 <th>Name</th>
@@ -12,7 +12,7 @@ const Table = () => {
             </tr>
             <Column/>
         </table>
-    </div>
+    </>
   )
 }
 

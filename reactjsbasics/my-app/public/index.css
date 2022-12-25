@@ -64,7 +64,7 @@ code {
   color:white;
 }
 button{
-  padding: 25px;
+  padding: 10px;
   margin: 20px;
 }
 button:disabled{
