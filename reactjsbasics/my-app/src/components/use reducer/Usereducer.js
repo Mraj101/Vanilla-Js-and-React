@@ -25,7 +25,7 @@ const Modal=({modalText})=>{
 }
 
 const reducer=(state,action)=>{
-    if(state.type==="ADD"){
+    if(action.type==="ADD"){
         const allBooks=[...state.books,action.payload]
         return {
             ...state,
@@ -33,40 +33,49 @@ const reducer=(state,action)=>{
             isModal:true,
             modalText:'Books added',
         }
+       
+    }
+    else if(action.type==="EnterMsg"){
+        const data=action.payload
+        return {
+            ...state,
+            modalText:data,
+        }
     }
     return state;
 }
 
 const Usereducer = () => {
 //  const [books, setBooks]=useState(bookData)
- const [bookName,setBookName]=useState('')
 //  const [isModal,setIsModal]=useState(false)
 //  const [modalText,setModalText]=useState('')
 
- const [BookState, dispatch] = useReducer(reducer,{
+const [bookState, dispatch] = useReducer(reducer,{
     books:bookData,
     isModal:false,
     modalText:'',
- })
+})
 
+const [bookName,setBookName]=useState('')
 
 
  const handleSubmit=(e)=>{
      e.preventDefault()
     const newBook={id:new Date().getTime().toString(), name:bookName}
-    // if(bookName.length>3){
-    //     setBooks((prevBooks)=>{
-    //         return [...prevBooks,newBook]
-    //     })
-    //     setModalText('Book is added')
-    //     setIsModal(true)
-    //     setBookName('')
-    // }
-    // else if(bookName.length<=3){
-    //     setIsModal(true)
-    //     setModalText('Enter book name')
-    // }
+    if(bookName.length>3){
+        // setBooks((prevBooks)=>{
+        //     return [...prevBooks,newBook]
+        // })
+        // setModalText('Book is added')
+        // setIsModal(true)
+        // setBookName('')
     dispatch({type:"ADD",payload:newBook})
+    setBookName('')
+    }
+    else if(bookName.length<=3){
+        const noData="Enter book name"
+        dispatch({type:"EnterMsg",payload:noData})
+    }
  }
 
   return (
@@ -77,8 +86,8 @@ const Usereducer = () => {
             <input type="text" id="Name" value={bookName} onChange={(e)=>setBookName(e.target.value)}/>
             <button type='submit'>Add Name:</button>
         </form>
-        {isModal && <Modal modalText={modalText}/>}
-        {books.map((book)=>{
+        {bookState.isModal && <Modal modalText={bookState.modalText}/>}
+        {bookState.books.map((book)=>{
             return <div>
                      <li style={{margin:"10px",padding:"5px" ,backgroundColor:"red",color:"white"}} key={book.id}>
                          {book.name}
