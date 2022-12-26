@@ -1,5 +1,5 @@
 import React ,{useState,useReducer} from 'react'
-
+import  {reducer}  from "./reducer"
 const bookData=[{
    id:1,
    name:"Hasnain"
@@ -24,26 +24,6 @@ const Modal=({modalText})=>{
     return <p style={{backgroundColor:"green"}}>{modalText}</p>
 }
 
-const reducer=(state,action)=>{
-    if(action.type==="ADD"){
-        const allBooks=[...state.books,action.payload]
-        return {
-            ...state,
-            books:allBooks,
-            isModal:true,
-            modalText:'Books added',
-        }
-       
-    }
-    else if(action.type==="EnterMsg"){
-        const data=action.payload
-        return {
-            ...state,
-            modalText:data,
-        }
-    }
-    return state;
-}
 
 const Usereducer = () => {
 //  const [books, setBooks]=useState(bookData)
@@ -77,6 +57,9 @@ const [bookName,setBookName]=useState('')
         dispatch({type:"EnterMsg",payload:noData})
     }
  }
+ const removeId=(id)=>{
+    dispatch({type:"REMOVE",payload:id})
+ }
 
   return (
     <div className='Container'>
@@ -91,7 +74,7 @@ const [bookName,setBookName]=useState('')
             return <div>
                      <li style={{margin:"10px",padding:"5px" ,backgroundColor:"red",color:"white"}} key={book.id}>
                          {book.name}
-                         <button style={{padding:"5px",marginLeft:"10px" ,backgroundColor:"brown",color:"white"}} type='submit'>remove</button>
+                         <button style={{padding:"5px",marginLeft:"10px" ,backgroundColor:"brown",color:"white"}} type='submit' onClick={()=>{removeId(book.id)}}>remove</button>
                      </li>
             </div>
                     
