@@ -17,19 +17,31 @@ const bookData=[{
     name:"Fahim"
 }
 ]
-const reducer=()=>{
-    
-}
+
+
 
 const Modal=({modalText})=>{
     return <p style={{backgroundColor:"green"}}>{modalText}</p>
 }
 
+const reducer=(state,action)=>{
+    if(state.type==="ADD"){
+        const allBooks=[...state.books,action.payload]
+        return {
+            ...state,
+            books:allBooks,
+            isModal:true,
+            modalText:'Books added',
+        }
+    }
+    return state;
+}
+
 const Usereducer = () => {
- const [books, setBooks]=useState(bookData)
+//  const [books, setBooks]=useState(bookData)
  const [bookName,setBookName]=useState('')
- const [isModal,setIsModal]=useState(false)
- const [modalText,setModalText]=useState('')
+//  const [isModal,setIsModal]=useState(false)
+//  const [modalText,setModalText]=useState('')
 
  const [BookState, dispatch] = useReducer(reducer,{
     books:bookData,
@@ -37,21 +49,24 @@ const Usereducer = () => {
     modalText:'',
  })
 
+
+
  const handleSubmit=(e)=>{
-    e.preventDefault()
-    if(bookName.length>3){
-        setBooks((prevBooks)=>{
-            const newBook={id:new Date().getTime().toString(), name:bookName}
-            return [...prevBooks,newBook]
-        })
-        setModalText('Book is added')
-        setIsModal(true)
-        setBookName('')
-    }
-    else if(bookName.length<=3){
-        setIsModal(true)
-        setModalText('Enter book name')
-    }
+     e.preventDefault()
+    const newBook={id:new Date().getTime().toString(), name:bookName}
+    // if(bookName.length>3){
+    //     setBooks((prevBooks)=>{
+    //         return [...prevBooks,newBook]
+    //     })
+    //     setModalText('Book is added')
+    //     setIsModal(true)
+    //     setBookName('')
+    // }
+    // else if(bookName.length<=3){
+    //     setIsModal(true)
+    //     setModalText('Enter book name')
+    // }
+    dispatch({type:"ADD",payload:newBook})
  }
 
   return (
