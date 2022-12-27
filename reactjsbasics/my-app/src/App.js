@@ -18,6 +18,7 @@ import DataFetchingErrorHandling from "./components/UseEffect/DataFetchingErrorH
 import InlineDynamic from "./components/dynamic styling/InlineDynamic";
 import Fragments from "./components/fragments/Fragments"
 import Usereducer from "./components/use reducer/Usereducer";
+import Component1 from "./components/useContextApi/Component1";
 
 function App(){
   // another way of fetching using for loops
@@ -50,6 +51,7 @@ function App(){
          <InlineDynamic/>
          <Fragments />
          <Usereducer/>
+         <Component1/>
     </div>
   )
 }
