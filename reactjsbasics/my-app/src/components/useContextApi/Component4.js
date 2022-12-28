@@ -4,7 +4,6 @@ import { UserContext } from './UserContext'
 const Component4 = () => {
     const user = useContext(UserContext);
   return (
-
     <div className='Container'>
         <h1>UseCOntext api</h1>
         <h1>{user.name}</h1>

@@ -20,6 +20,7 @@ import Fragments from "./components/fragments/Fragments"
 import Usereducer from "./components/use reducer/Usereducer";
 import Component1 from "./components/useContextApi/Component1";
 import Cycles from "./components/reactLifecycle/Cycles";
+import RouteDom from "./components/React Router Dom/RouteDom";
 
 function App(){
   // another way of fetching using for loops
@@ -55,6 +56,7 @@ function App(){
          <Usereducer/>
          <Component1/>
          <Cycles/>
+         <RouteDom/>
     </div>
   )
 }
