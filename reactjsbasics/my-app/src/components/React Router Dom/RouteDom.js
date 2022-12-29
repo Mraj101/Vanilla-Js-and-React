@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Routes,Route } from 'react-router-dom'
-import { About } from './About'
-import Contact from './Contact'
 
 import Home from './HomePage'
+import Contact from './Contact'
+import About  from './About'
+import Navbar from './Navbar'
 
 const RouteDom = () => {
   return (
@@ -30,9 +31,9 @@ const RouteDom = () => {
                 <h3>add /about in url</h3>
                 <h3>add /contact in url</h3>
                 <h3>add /home in url</h3>
-            </div>
-            <div>
-  
+              <div>
+                  <Navbar/>
+              </div>
             </div>
           <Routes>
             <Route path="/home" element={<Home/>}/>
