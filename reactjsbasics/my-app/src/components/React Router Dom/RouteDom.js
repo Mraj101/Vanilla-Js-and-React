@@ -9,7 +9,7 @@ const RouteDom = () => {
   return (
          <BrowserRouter>
             <div className='Container'>
-              {/* <nav>
+             {/* <nav>
                 <ul>
 
           
@@ -30,6 +30,9 @@ const RouteDom = () => {
                 <h3>add /about in url</h3>
                 <h3>add /contact in url</h3>
                 <h3>add /home in url</h3>
+            </div>
+            <div>
+  
             </div>
           <Routes>
             <Route path="/home" element={<Home/>}/>
