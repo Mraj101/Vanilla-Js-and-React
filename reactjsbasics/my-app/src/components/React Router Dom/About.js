@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const About = () => {
+
+  const naviGate=useNavigate()
   return (
     <div>
         <h1>About Page</h1>
@@ -8,6 +11,9 @@ const About = () => {
         <br />
         <br />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti necessitatibus unde quibusdam saepe vel sed minima placeat optio, eum neque enim ratione labore aperiam omnis, at eos quia tempora ipsa!</p>
+        <button onClick={()=>{
+          naviGate('/home')
+        }} >Navigate to Home</button>
     </div>
   )
 }

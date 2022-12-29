@@ -6,11 +6,11 @@ import Home from './HomePage'
 
 const Navbar = () => {
   return (
-    <div>
-        <Link to="/home" >Home</Link>
-        <Link to="/contact" >Contact</Link>
-        <Link to="/about" >About</Link>
-    </div>
+    <nav>
+        <Link className='nav-link'  to="/contact" >Contact</Link>
+        <Link className='nav-link' to="/home" >Home</Link>
+        <Link className='nav-link' to="/about" >About</Link>
+    </nav>
   )
 }
 
