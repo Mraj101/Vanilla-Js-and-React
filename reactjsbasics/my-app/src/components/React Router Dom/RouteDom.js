@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes,Route } from 'react-router-dom'
 
 import Home from './HomePage'
-import Contact from './Contact'
+import Blogs from './Blogs'
 import About  from './About'
 import Navbar from './Navbar'
 
@@ -38,7 +38,7 @@ const RouteDom = () => {
           <Routes>
             <Route path="/about" element={<About/>}/>
             <Route path="/home" element={<Home/>}/>
-            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/blogs" element={<Blogs/>}/>
           </Routes>
         </BrowserRouter>
   )
