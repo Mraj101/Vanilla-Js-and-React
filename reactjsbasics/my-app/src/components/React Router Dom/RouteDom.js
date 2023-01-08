@@ -9,7 +9,7 @@ import Navbar from './Navbar'
 const RouteDom = () => {
   return (
          <BrowserRouter>
-            <div className='Container'>
+            <div className='Container' style={{width:"600px"}}>
              {/* <nav>
                 <ul>
 
