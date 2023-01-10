@@ -1,6 +1,7 @@
 import React ,{useState}from 'react'
 import { Link } from 'react-router-dom'
 
+
 import { blogsData } from './data'
 
 const Blogs = () => {
@@ -21,7 +22,7 @@ const Blogs = () => {
       return <article key={id} className="Container" style={{display:"inline-block"}}>
          <h1>{title}</h1>
          <p>body: {truncateString(body,100)}</p>
-         <Link to='/blogs/:blog'>Learn More</Link>
+         <Link to='/blog' >Learn More</Link>
       </article>
     }) }
 </div>

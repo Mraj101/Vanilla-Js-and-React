@@ -5,6 +5,7 @@ import Home from './HomePage'
 import Blogs from './Blogs'
 import About  from './About'
 import Navbar from './Navbar'
+import Blog from './Blog'
 
 const RouteDom = () => {
   return (
@@ -39,6 +40,7 @@ const RouteDom = () => {
             <Route path="/about" element={<About/>}/>
             <Route path="/home" element={<Home/>}/>
             <Route path="/blogs" element={<Blogs/>}/>
+            <Route path="/blog" element={<Blog/>}/>
           </Routes>
         </BrowserRouter>
   )
