@@ -21,7 +21,7 @@ const Blogs = () => {
       return <article key={id} className="Container" style={{display:"inline-block"}}>
          <h1>{title}</h1>
          <p>body: {truncateString(body,100)}</p>
-         <Link to={title}>Learn More</Link>
+         <Link to='/blogs/:blog'>Learn More</Link>
       </article>
     }) }
 </div>
