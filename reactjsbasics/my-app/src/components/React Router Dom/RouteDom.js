@@ -40,7 +40,7 @@ const RouteDom = () => {
             <Route path="/about" element={<About/>}/>
             <Route path="/home" element={<Home/>}/>
             <Route path="/blogs" element={<Blogs/>}/>
-            <Route path="/blog" element={<Blog/>}/>
+            <Route path="/blogs/:title" element={<Blog/>}/>
           </Routes>
         </BrowserRouter>
   )
