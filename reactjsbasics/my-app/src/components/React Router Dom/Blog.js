@@ -1,7 +1,6 @@
-import React ,{ useState,useEffect }from 'react'
+import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-import {blogsData} from './data'
 
 const Blog = () => {
   const location=useLocation()
@@ -16,6 +15,7 @@ const Blog = () => {
 
   return (
     <div>
+      bloh blog blgo
         <h1>{location.state.title }</h1>
        <p>{location.state.body}</p>
     </div>

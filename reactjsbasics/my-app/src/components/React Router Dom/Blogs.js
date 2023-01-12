@@ -22,7 +22,8 @@ const Blogs = () => {
       return <article key={id} className="Container" style={{display:"inline-block"}}>
          <h1>{title}</h1>
          <p>body: {truncateString(body,100)}</p>
-         <Link to={title} state={{id,title,body}}>Learn More</Link>
+         <Link to={title}
+          state={{id,title,body}}>Learn More</Link>
       </article>
     }) }
 </div>
