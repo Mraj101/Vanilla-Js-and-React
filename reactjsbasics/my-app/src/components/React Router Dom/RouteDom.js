@@ -6,6 +6,7 @@ import Blogs from './Blogs'
 import About  from './About'
 import Navbar from './Navbar'
 import Blog from './Blog'
+import User from './User'
 
 const RouteDom = () => {
   return (
@@ -40,7 +41,8 @@ const RouteDom = () => {
             <Route path="/about" element={<About/>}/>
             <Route path="/home" element={<Home/>}/>
             <Route path="/blogs" element={<Blogs/>}/>
-            <Route path="/blogs/:title" element={<Blog/>}/>
+            <Route path="/Blog" element={<Blog/>}/>
+            <Route path="/User/:userId" element={<User/>}/>
           </Routes>
         </BrowserRouter>
   )
