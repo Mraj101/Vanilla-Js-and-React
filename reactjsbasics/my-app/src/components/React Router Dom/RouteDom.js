@@ -41,8 +41,9 @@ const RouteDom = () => {
             <Route path="/about" element={<About/>}/>
             <Route path="/home" element={<Home/>}/>
             <Route path="/blogs" element={<Blogs/>}/>
-            <Route path="/blogs/:title" element={<Blog/>}/>
-            <Route path="/User/:useId" element={<User/>}/>
+            {/* <Route path="/blogs/:title" element={<Blog/>}/> */}
+            {/* <Route path="/User/:useId" element={<User/>}/> */}
+            <Route path="/User" element={<User/>}/>
           </Routes>
         </BrowserRouter>
   )
