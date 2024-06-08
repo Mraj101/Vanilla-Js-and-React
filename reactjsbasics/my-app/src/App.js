@@ -21,6 +21,7 @@ import Usereducer from "./components/use reducer/Usereducer";
 import Component1 from "./components/useContextApi/Component1";
 import Cycles from "./components/reactLifecycle/Cycles";
 import RouteDom from "./components/React Router Dom/RouteDom";
+import ShowBox from "./components/showing box/ShowBox";
 
 function App(){
   // another way of fetching using for loops
@@ -57,6 +58,7 @@ function App(){
          <Component1/>
          <Cycles/>
          <RouteDom/>
+         <ShowBox/>
     </div>
   )
 }
